@@ -45,10 +45,17 @@
 
 .footer-area {
   margin-top: 100px;
-  padding: 50PX 0;
+  padding: 50px 0;
   box-sizing: border-box;
-  background: #0dc6ec;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(13, 198, 236, 1) 67%,
+    rgba(0, 212, 255, 1) 100%
+  );
   color: white;
+  position: relative;
 }
 
 .main {
@@ -67,11 +74,11 @@
   width: 230px;
 }
 
-.single-footer:first-child{
+.single-footer:first-child {
   width: 400px;
 }
 
-.single-footer h4{
+.single-footer h4 {
   text-transform: capitalize;
   font-size: 22px;
   margin-bottom: 20px;
@@ -94,3 +101,12 @@
   text-transform: capitalize;
   margin-top: 50px;
 }
+
+/* .waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+} */
