@@ -42,3 +42,55 @@
   transform: translate3d(0px, -5px, 0px);
   color: #316ce8;
 }
+
+.footer-area {
+  margin-top: 100px;
+  padding: 50PX 0;
+  box-sizing: border-box;
+  background: #0dc6ec;
+  color: white;
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.single-footer {
+  width: 230px;
+}
+
+.single-footer:first-child{
+  width: 400px;
+}
+
+.single-footer h4{
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  color: #333;
+  border: 1px solid #333;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.copy {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
