@@ -45,10 +45,11 @@
 
 .footer-area {
   margin-top: 100px;
-  padding: 50PX 0;
+  padding: 50px 0;
   box-sizing: border-box;
   background: #30e5d0;
   color: white;
+  position: relative;
 }
 
 .main {
@@ -67,11 +68,11 @@
   width: 230px;
 }
 
-.single-footer:first-child{
+.single-footer:first-child {
   width: 400px;
 }
 
-.single-footer h4{
+.single-footer h4 {
   text-transform: capitalize;
   font-size: 22px;
   margin-bottom: 20px;
