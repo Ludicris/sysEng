@@ -47,13 +47,7 @@
   margin-top: 100px;
   padding: 50px 0;
   box-sizing: border-box;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(13, 198, 236, 1) 67%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-color:#747474;
   color: white;
   position: relative;
 }
@@ -110,3 +104,15 @@
   height: 100%;
   background: red;
 } */
+
+.logo-color {
+  color: #30e5d0;
+}
+
+.btn {
+  background-color: #30e5d0;
+}
+
+.body {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
