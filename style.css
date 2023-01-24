@@ -11,7 +11,7 @@
 .team4 h4,
 .team4 h5,
 .team4 h6 {
-  color: #3e4555;
+  color: #008575;
 }
 
 .team4 .font-weight-medium {
@@ -47,7 +47,7 @@
   margin-top: 100px;
   padding: 50PX 0;
   box-sizing: border-box;
-  background: #0dc6ec;
+  background: #30e5d0;
   color: white;
 }
 
@@ -93,4 +93,32 @@
   text-align: center;
   text-transform: capitalize;
   margin-top: 50px;
+}
+
+html body {
+  background: #191919;
+
+}
+
+h2{
+  color: #30e5d0;
+}
+
+h3{
+  color: #30e5d0;
+}
+
+p{
+  color: white;
+}
+
+.i-btn{
+  background: #747474;
+  color: white;
+  outline: none;
+  box-shadow: none;
+}
+
+.m-head{
+  color: #30e5d0;
 }
