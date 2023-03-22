@@ -10,65 +10,69 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
+    <script
+      src="https://kit.fontawesome.com/c25aa32a21.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Group 14</title>
   </head>
   <body>
     <!--Navbar-->
-<!--Navbar-->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
-  <div class="container">
-    <img
-    width = "150"
-    src = "img\Picture2.png"
-    class = "d-inline-block align-middle mr-2">
-    <a href="#" class="navbar-brand">VeloCity</a>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+      <div class="container">
+        <img
+          width="150"
+          src="img\Picture2.png"
+          class="d-inline-block align-middle mr-2"
+        />
+        <a href="#" class="navbar-brand">VeloCity</a>
 
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navmenu"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navmenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a href="/lit.html" class="nav-link">Research</a>
-        </li>
-        <li class="nav-item">
-          <a href="/hci.html" class="nav-link">HCi</a>
-        </li>
-        <li class="nav-item">
-          <a href="/index.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Requirements</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/lit.html" class="nav-link">Research</a>
+            </li>
+            <li class="nav-item">
+              <a href="/hci.html" class="nav-link">HCi</a>
+            </li>
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/requirements.html" class="nav-link">Requirements</a>
+            </li>
+            <li class="nav-item">
+              <a href="/appendix.html" class="nav-link">Appendices</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <section class="bg-dark text-light p-2 text-center text-sm-start">
       <div class="container">
         <div class="d-sm-flex align-items-center justify-content-between">
           <div>
             <h1>
-              Making performance data
-              <span class="m-head">universally accessible</span>
+              Human-Computer <br />
+              Interaction
+              <span class="m-head">(HCI)</span>
             </h1>
-            <p class="lead my-4">
-              With Project Velocity and Performance AI, we will make data
-              available for everyone, demonstrate new innovations such as
-              `virtual coach`, and help bring people together
-            </p>
           </div>
           <img
             class="img-fluid w-50 ms-auto d-none d-sm-block"
@@ -78,30 +82,206 @@
         </div>
       </div>
     </section>
-
-    <!--HCI-->
+    <!--Personas-->
     <section id="learn" class="p-5">
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-md">
-            <img src="img/undraw_writer_q06d.svg" class="img-fluid alt=" />
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row justify-content-center mb-4">
+          <h1 class="text-center">
+            <span class="m-head"> Personas</span>
+          </h1>
+          <p class="lead">
+            We created personas so we could more accurately represent what our
+            target user-base would look like and how they would interact with
+            the app
+          </p>
+          <div class="d-flex justify-content-center">
+            <h4>John – wheelchair basketball player</h4>
           </div>
-          <div class="col-md p-5">
-            <h2>HCI</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              repellat totam ipsam error numquam aliquam, libero culpa quasi,
-              consequuntur voluptatibus facere doloremque eum illo nobis
-              quisquam quam quidem optio! Magnam aut, incidunt repellendus rem,
-              soluta perferendis, odio labore consequuntur laborum ratione eius
-              minima? Iusto odit ab dolore molestiae voluptatibus sint!
-            </p>
-            <a href="#" class="btn btn-secondary mt-1">
-              <i class="bi bi-chevron-right"></i>Read More
-            </a>
+          <div class="row">
+            <div class="d-flex justify-content-center">
+              <img src="img/persona-1.png" class="img-persona shadow-sm" />
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <h4>Poppy – casual exerciser</h4>
+          </div>
+          <div class="row">
+            <div class="d-flex justify-content-center">
+              <img src="img/persona-2.png" class="img-persona shadow-sm" />
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!--Sketches-->
+    <section id="learn" class="p-5">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row justify-content-center mb-4">
+          <h1 class="text-center">
+            <span class="m-head"> Sketches </span>
+          </h1>
+          <p class="lead">
+            Once we gathered user requirements and understood our users better
+            using personas & scenarios, we drew sketches to discover how the
+            mobile application would look like:
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <h4>Sketch 1</h4>
+        </div>
+        <div class="row">
+          <div class="d-flex justify-content-center">
+            <img src="img/Picture 1.jpg" class="img-fluid shadow-sm" />
+            <img src="img/Picture 2.jpg" class="img-fluid shadow-sm" />
+            <img src="img/Picture 3.jpg" class="img-fluid shadow-sm" />
+            <img src="img/Picture 4.jpg" class="img-fluid shadow-sm" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="d-flex justify-content-center">
+          <h4>Sketch 2</h4>
+        </div>
+        <p>
+          The users said it is clear for them to navigate through each page from
+          the home page and, compared to sketch 1, a title on every page helps
+          them identify where they are. They also stated that, on the workout
+          page, putting both virtual coach and sensor data together benefits the
+          efficiency of the workout. As for adding voice control, the users feel
+          more confident about using the app and the AI self-coach.
+        </p>
+        <div class="row">
+          <div class="d-flex justify-content-center">
+            <img src="img/Sketch 1.jpg" class="img-fluid shadow-sm" />
+            <img src="img/Sketch 2.jpg" class="img-fluid shadow-sm" />
+            <img src="img/Sketch 3.png" class="img-fluid shadow-sm" />
+            <img src="img/Sketch 4.jpg" class="img-fluid shadow-sm" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Prototype-->
+    <section id="learn" class="p-5">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row justify-content-center mb-4">
+          <h1 class="text-center">
+            <span class="m-head"> Prototypes </span>
+          </h1>
+          <p class="lead">
+            Using Figma, we designed some mock-up deisgns for the app, our
+            initial prototype was inspired by our 2nd sketches.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <h4>Sign-up, sensors & workout</h4>
+        </div>
+        <div class="row">
+          <div class="d-flex justify-content-center">
+            <img src="img/P1.png" class="img-fluid shadow-sm" />
+            <img src="img/P2.png" class="img-fluid shadow-sm" />
+            <img src="img/P3.png" class="img-fluid shadow-sm" />
+            <img src="img/P4.png" class="img-fluid shadow-sm" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="d-flex justify-content-center">
+          <h4>Diverse graphics for different sensors and time periods</h4>
+        </div>
+
+        <div class="row">
+          <div class="d-flex justify-content-center">
+            <img src="img/P5.png" class="img-fluid shadow-sm" />
+            <img src="img/P6.png" class="img-fluid shadow-sm" />
+            <img src="img/P7.png" class="img-fluid shadow-sm" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="heuristic-evaluation" class="heuristic-evaluation">
+      <div class="container aos-init aos-animate" data-aos="flip-down">
+        <div class="row justify-content-center mb-4">
+          <h1 class="text-center">
+            <span class="m-head"> Heuristic Evaluation </span>
+          </h1>
+          <p class="lead">
+            We chose a heuristic evaluation as it would allow us to identify the
+            usability problems in the user interface design proposed in our
+            prototype, we had evaluators assess the prototype to improve the
+            effectiveness of the evaluation.  
+          </p>
+        </div>
+        <div class="row">
+          <div class="row justify-content-center mb-4">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Heuristic</th>
+                  <th scope="col">Problem</th>
+                  <th scope="col">Solution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Learnability and utility</th>
+                  <td>
+                    App provides no descriptions on its functionality which
+                    creates a bad experience for first-time users
+                  </td>
+                  <td>Add descriptions where necessary </td>
+                </tr>
+                <tr>
+                  <th scope="row">Consistency and standards</th>
+                  <td>
+                    In the sensors page, it is not clear that one must manually
+                    add sensors 
+                  </td>
+                  <td>Include an 'add sensors' button  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Effectiveness and utility</th>
+                  <td>
+                    In 'Sports Workout' there is no clear way of starting a
+                    workout
+                  </td>
+                  <td>Include a 'Start Workout' button  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="social-links">
+        <a href="https://github.com/BaneTrajkovic/Project-VeloCity"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://projectvelocity2023.wordpress.com/"
+          ><i class="fa-brands fa-wordpress"></i
+        ></a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="#">Research</a>
+        </li>
+        <li>
+          <a href="#">HCi</a>
+        </li>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Requirements</a>
+        </li>
+      </ul>
+      <p class="copyright">2023 All Rights Reserved</p>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
