@@ -80,6 +80,7 @@ p {
 .m-head {
   color: #30e5d0;
   text-align: center;
+  margin: auto;
 }
 
 * {
@@ -268,3 +269,25 @@ h4 {
   display: block;
   margin-bottom: 8px;
 }
+
+.page-area ul li {
+  list-style-type: none;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+/* .sketches img {
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  align-items: center;
+} */
+
+.sketches img{
+  height: 500px;
+  padding: 10px;
+}
+

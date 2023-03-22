@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c25aa32a21.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Group 14</title>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+      <div class="container">
+        <img
+          width="150"
+          src="img\Picture2.png"
+          class="d-inline-block align-middle mr-2"
+        />
+        <a href="#" class="navbar-brand">VeloCity</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/lit.html" class="nav-link">Research</a>
+            </li>
+            <li class="nav-item">
+              <a href="/hci.html" class="nav-link">HCi</a>
+            </li>
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/requirements.html" class="nav-link">Requirements</a>
+            </li>
+            <li class="nav-item">
+              <a href="/appendix.html" class="nav-link">Appendices</a>
+            </li>
+            <li class="nav-item">
+              <a href="system.html" class="nav-link">System Design</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="bg-dark text-light p-2 text-center text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div class="page-area">
+            <h1>System Design</h1>
+          </div>
+          <img
+            class="img-fluid w-50 ms-auto d-none d-sm-block"
+            src="img/undraw_personal_trainer_re_cnua.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--Intro-->
+    <section id="learn" class="p-5">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row justify-content-center mb-4">
+          <h1 class="text-center">
+            <span class="m-head">User Interface Design</span>
+          </h1>
+
+          <h4><br />Introduction</h4>
+          <p class="lead">
+            Over the years, the mobile applications transformed the way we use
+            technology in our daily lives. From solely enabling us to
+            communicate through phone calls to supporting us in managing
+            personal finances and tracking our health and fitness goals.
+            <br />
+            <br />
+            This tremendous advancement of mobile applications was unfortunately
+            not followed by comprehensive accessibility features, which would
+            allow people with blindness to use them with ease.
+            <br />
+            <br />
+            According to Washington University [1], almost every person who uses
+            an assistive technology, such as a screen reader, can describe
+            negative experiences with apps that do not provide proper support.
+            <br />
+            <br />
+            All of this made our team even more motivated to create something
+            meaningful, something inclusive, something that will be equally
+            useful to disabled and non-disabled.
+            <br />
+            <br />
+            “We were determined to make the accessibility-first fitness tracking
+            app.”
+            <br />
+            <br />
+            The most important aspect of developing such an app was without a
+            doubt the User Interface Design, since it acts as the crucial link
+            bridging the gap between individuals with disabilities and those
+            without.
+          </p>
+
+          <h4><br />Accessibility-First Design Principles</h4>
+          <p class="lead">
+            Throughout this page, we will go over all of the most important
+            aspects of the User Interface Design, which is what really makes
+            this app unlike many others in the fitness tracking app market.
+            <br />
+            <br />
+          </p>
+
+          <p>
+            <b>High Contrast Colours</b>
+            <br />
+            When designing the app, we opted for using
+            <b>high contrast colours.</b>
+            Not only do they provide better accessibility for visually impaired
+            users, but also accommodate the needs of those with colour
+            blindness.
+            <br />
+            <br />
+          </p>
+
+          <img src="img/bane_1.png" />
+          <p>
+            <br />
+            <br />
+            <b>Intuitive and Simple Navigation</b>
+            <br />
+            To make sure that our app is as simple to use as possible, we moved
+            away from using pop-up windows and convoluted multi-layered
+            navigation tree with vast number of different options to using
+            <b>intuitive and simple</b> streamlined system which allows users to
+            know where they are and what they are doing at every point in time.
+            <br />
+            <br />
+          </p>
+          <img src="/img/bane_2.png" />
+          <p>
+            <br />
+            <br />
+            <b>Screen Reader Friendliness</b>
+            <br />
+            Although many apps are compatible with screen readers such as
+            TalkBack, many of them have not yet managed to thoroughly implement
+            all of its functionalities, incorporating it with the app’s design
+            itself.
+            <br />
+            <br />
+          </p>
+          <img src="/img/bane_3.png" />
+          <p>
+            <br />
+            <br />
+            <b>Disability-Inclusive Design Elements</b>
+            <br />
+            Although screen readers help individuals with blindness, relying
+            solely on them, they tend to exclude visually impaired people who
+            prefer not to use them. How we approached this challenge was
+            designing the core aspects of the UI with respect to their needs.
+            That comprised of using increased text visibility, large simple
+            controls, and implementing advanced features during active workout
+            such as colour brightness change respective to the range set, as
+            well as the use of shapes to also assist users with colour vision
+            deficiencies [2].
+            <br />
+            <br />
+          </p>
+          <figure class="figure">
+            <img src="/img/bane_4.png" class="figure-img img-fluid rounded" />
+            <figcaption class="figure-caption text-center">
+              When within range (left), out of range, increasing brightness,
+              opacity (right)
+            </figcaption>
+            <br />
+            <br />
+          </figure>
+
+          <figure class="figure">
+            <img src="/img/bane_5.png" class="figure-img img-fluid rounded" />
+            <figcaption class="figure-caption text-center">
+              Use of shapes alongside text within buttons
+            </figcaption>
+          </figure>
+
+          <p>
+            <br />
+            <br />
+            <b>Speech Recognition - Virtual Coach Integration</b>
+            <br />
+            This is what primarily differs our app from all the others. Adding
+            this functionality didn’t only enhance the user experience, but
+            opened up an entirely new layer of interaction with the device and
+            the app itself. From being able to check your heart rate during the
+            workout to getting motivation when needed, all without a touch of a
+            button. This represents a universal point of access for all types of
+            app users, ranging from those with disabilities to those without.
+            <br />
+          </p>
+
+          <figure class="figure">
+            <img src="/img/bane_6.png" class="figure-img img-fluid rounded" />
+            <figcaption class="figure-caption text-center">
+              Virtual Coach abstract representation
+            </figcaption>
+          </figure>
+
+          <p>
+            <br />
+            <br />
+            <b>Text-To-Speech Feature</b>
+            <br />
+            Apart from screen reader functionality, it offers built in
+            text-to-speech integration, which ends up being helpful not only to
+            those using screen readers every day, but also visually impaired
+            people who just need some extra help when reading the text on the
+            screen. Although it enables features like single switch button for
+            selecting different types of activity types and training intents, it
+            also allows for virtual coach features mentioned in the Speech
+            Recognition Integration section.
+          </p>
+          <figure class="figure">
+            <img src="/img/bane_7.png" class="figure-img img-fluid rounded" />
+            <figcaption class="figure-caption text-center">
+              Text-To-Speech abstract representation
+            </figcaption>
+          </figure>
+
+          <p>
+            <br />
+            <br />
+            <b>Hand-drawn sketches</b>
+            <br />
+            The development story starts here, after numerous iterations and
+            continuous feedback from the potential users, we ended up using the
+            following final design, transferring it from the paper to lines of
+            code in the process.
+          </p>
+          <!-- <div class = "sketches">
+              <img src="img/bane_8.png" class="img-fluid shadow-sm">
+              <br>
+              <img src="img/bane_9.png" class="img-fluid shadow-sm">
+              <br>
+              <img src="img/bane_10.png" class="img-fluid shadow-sm">
+          </div> -->
+          <div class = "row">
+            <div class="d-flex justify-content-center">
+                <div class="sketches">
+                    <img src="/img/IMG_0641.jpg" class="img-fluid shadow-sm" />
+                    <img src="/img/IMG_0642.jpg" class="img-fluid shadow-sm" />
+                    <img src="/img/IMG_0643.jpg" class="img-fluid shadow-sm" />
+
+                </div>
+            </div>
+          </div>
+          <div class = "row">
+            <div class="d-flex justify-content-center">
+                <div class="sketches">
+                    <img src="/img/IMG_0644.jpg" class="img-fluid shadow-sm" />
+                    <img src="/img/IMG_0645.jpg" class="img-fluid shadow-sm" />
+                    <img src="/img/IMG_0646.jpg" class="img-fluid shadow-sm" />
+
+                </div>
+            </div>
+          </div>
+          <div class = "row">
+            <div class="d-flex justify-content-center">
+                <div class="sketches">
+                    <img src="/img/IMG_0647.jpg" class="img-fluid shadow-sm" />
+                </div>
+            </div>
+          </div>
+
+          <p>
+            <br />
+            <br />
+            <b>Online interactive wireframe</b>
+            <br />
+            put screenshots into canva or figma
+          </p>
+          <p>
+            <br />
+            <br />
+            <b>References</b>
+            <br />
+            [1] University of Washington, Large-Scale Analysis Finds Many Mobile Apps Are Inaccessible, online: https://create.uw.edu/initiatives/large-scale-analysis-finds-many-mobile-apps-are-inaccessible/
+            <br>
+            [2] Android Developer Documentation, Principles for improving app accessibility   , online: Principles for improving app accessibility  |  Android Developers
+          </p>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="social-links">
+        <a href="https://github.com/BaneTrajkovic/Project-VeloCity"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://projectvelocity2023.wordpress.com/"
+          ><i class="fa-brands fa-wordpress"></i
+        ></a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="/lit.html">Research</a>
+        </li>
+        <li>
+          <a href="/hci.html">HCi</a>
+        </li>
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="/requirements.html">Requirements</a>
+        </li>
+        <li class="nav-item">
+          <a href="/appendix.html" class="nav-link">Appendices</a>
+        </li>
+        <li class="nav-item">
+          <a href="system.html" class="nav-link">System Design</a>
+        </li>
+      </ul>
+      <p class="copyright">2023 All Rights Reserved</p>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
