@@ -286,8 +286,139 @@ h4 {
   align-items: center;
 } */
 
-.sketches img{
+.sketches img {
   height: 500px;
   padding: 10px;
 }
 
+::selection {
+  background: #008575;
+  color: #fff;
+}
+
+.v-tab {
+  max-width: 950px;
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.v-tab .topic {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.v-content {
+  top: 0;
+  align-items: right;
+  max-width: 65%;
+}
+
+.v-content .list {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 50px;
+  position: relative;
+}
+
+.v-content .list label {
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: white;
+  z-index: 12;
+}
+
+#home:checked ~ .list label.home,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about {
+  color: #fff;
+}
+.v-content .list label:hover {
+  color: #008575;
+}
+.v-content .slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 110%;
+  border-radius: 12px;
+  background: #008575;
+  transition: all 0.4s ease;
+}
+#home:checked ~ .list .slider {
+  top: 0;
+}
+#blog:checked ~ .list .slider {
+  top: 60px;
+}
+#help:checked ~ .list .slider {
+  top: 120px;
+}
+#code:checked ~ .list .slider {
+  top: 180px;
+}
+#about:checked ~ .list .slider {
+  top: 240px;
+}
+.v-content .text-content {
+  width: 80%;
+  height: 100%;
+}
+.v-content .text {
+  display: none;
+}
+.v-content .text .title {
+  font-size: 25px;
+
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #008575;
+}
+.v-content .text p {
+  text-align: justify;
+}
+.v-content .text-content .home {
+  display: block;
+}
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about {
+  display: block;
+}
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home {
+  display: none;
+}
+.v-content input {
+  display: none;
+}
+
+.home-text img {
+  margin: 0 0 0 15px;
+  vertical-align: middle;
+}
+
+h5 {
+  color: white;
+}
+
+.idk {
+  color: white;
+}
