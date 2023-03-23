@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c25aa32a21.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.0.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Group 14</title>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+      <div class="container">
+        <img
+          width="150"
+          src="img\Picture2.png"
+          class="d-inline-block align-middle mr-2"
+        />
+        <a href="#" class="navbar-brand">VeloCity</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/lit.html" class="nav-link">Research</a>
+            </li>
+            <li class="nav-item">
+              <a href="/hci.html" class="nav-link">HCi</a>
+            </li>
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/requirements.html" class="nav-link">Requirements</a>
+            </li>
+            <li class="nav-item">
+              <a href="/appendix.html" class="nav-link">Appendices</a>
+            </li>
+            <li class="nav-item">
+              <a href="system.html" class="nav-link">System Design</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Showcase-->
+    <section class="bg-dark text-light p-2 text-center text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Implementation</h1>
+          </div>
+          <img
+            class="img-fluid w-50 ms-auto d-none d-sm-block"
+            src="img/undraw_personal_trainer_re_cnua.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <section>
+        <div class="container aos-init aos animate" data-aos="fade-up">
+          <div class="row justify-content-center mb-4">
+            <h4><br /><br /><b>Main technologies</b></h4>
+            <p class="lead">
+              As described in our 'Research' page, our main technologies are
+              <span class="m-head"><b>Xamarin</b></span
+              >,<span class="m-head"><b> .NET MAUI</b></span> and<span
+                class="m-head"
+                ><b> C#</b></span
+              >
+            </p>
+
+            <div class="row">
+              <div class="d-flex justify-content-center">
+                <img
+                  src="img/png-transparent-xamarin-mobile-app-development-native-net-framework-c-android-blue-angle-calendar-removebg-preview.png"
+                  class="tech"
+                />
+                <img src="img/shadow-removebg-preview.png" class="tech" />
+                <img src="img/Csharp_Logo.png" class="tech" />
+                <img
+                  src="img/radial-icon-set-2-bluetooth-bluetooth-icon-png-clipart-thumbnail-removebg-preview.png"
+                  class="tech"
+                />
+              </div>
+            </div>
+            <h4><br /><br />Dependencies & Tools</h4>
+            <p class="lead">
+              We also imported some plugins & dependencies in our project to
+              help us test & build our project
+            </p>
+          </div>
+        </div>
+      </section>
+  
+
+  
+      <section id="learn" class="p-5">
+        <div class="container aos-init aos-animate" data-aos="fade-up">
+          <div class="row justify-content-center mb-4">
+              <div class="v-tab">
+                <div class="v-content">
+                  <input type="radio" name="slider" checked id="home" />
+                  <input type="radio" name="slider" id="blog" />
+                  <input type="radio" name="slider" id="help" />
+                  <input type="radio" name="slider" id="code" />
+                  <input type="radio" name="slider" id="about" />
+                  <div class="list">
+                    <label for="home" class="home" >
+                      <span class="title">Plugin.BLE</span>
+                    </label>
+                    <label for="blog" class="blog">
+                      <span class="title">Toolkit.Maui</span>
+                    </label>
+                    <label for="help" class="help">
+                      <span class="title">Toolkit.Mvvm</span>
+                    </label>
+                    <label for="code" class="code">
+                      <span class="title">Syncfusion</span>
+                    </label>
+                    <div class="slider"></div>
+                  </div>
+                  <div class="text-content">
+                    <div class="home text">
+                      <h5><b>Plugin.BLE</b></h5>
+                      <p class="lead">
+                        Given that the .NET MAUI framework does not offer in-built
+                        bluetooth libraries, we had to rely and a community driven
+                        plugin called <span class="m-head">Plugin.BLE</span> which
+                        provided us with a reilable way to communicate with
+                        Bluetooth Low Energy (BLE) devices - in our case, sensors.
+                        It gave us the ability to scan, discover and connect to BLE
+                        devices whilst also being able to read their
+                        characteristics. In our case, we used it to discover heart
+                        and cadence sensors and read their information during a
+                        workout.
+                        <br />
+                        <br />
+                      </p>
+                      
+                    </div>
+                    <div class="blog text">
+                      <h5><b>CommunityToolkit.Maui</b></h5>
+                      <p class="lead">
+                        
+                        A plugin that offers a range of benefits to developing
+                        cross-platform applications using .NET MAUI. It enables
+                        greater control over handling data input, validation,
+                        dialogs and animation. Furthermore, it also provides
+                        platform-specific implementations and code which is helpful
+                        to our project given the current scope of the app is for
+                        Android devices only.
+                      </p>
+                  </div>
+                  <div class="help text">
+                    <h5><b>CommunityToolkit.Mvvm</b></h5>
+
+                      <p class="lead">
+                        Offers an implementation of the Model-View-ViewModel(MVVM)
+                        architecture which helps separate concerns thus promoting
+                        industry software engineering standards. It helps create
+                        maintanable testable and scalable code whilst providing a
+                        range of utilities for creating and binding to Viewmodel
+                        classes which was primarily used in the sensor integration
+                        development given several models were required to build a
+                        functioning bluetooth system. With the plugin, it provides
+                        more structure to an otherwise unstructured codebase.
+                      </p>
+                  </div>
+                  <div class="code text">
+                    <h5><b>Syncfusion</b></h5>
+
+                      <p class="lead">
+                        Enables the use of data visualization. The plugin offers a range of chart types, in our instance we primarily use line graphs to show how sensor data alternates throughout a workout. The charts are customizable allowing us to adjust the fonts, colors and markers.
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br /> 
+        </div>
+      </section>
+
+      <section class="p-5">
+        <div class="container aos-init aos-animate" data-aos="fade-up">
+            <div class="row justify-content-center mb-4">
+                <h4 class="text-center"><br>Bluetooth Implementation</h4>
+                <h5><b><br>Tools and Dependencies</b></h5>
+                <p>Carousel</p>
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                      <img
+                        src="img/png-transparent-xamarin-mobile-app-development-native-net-framework-c-android-blue-angle-calendar-removebg-preview.png"
+                        class="tech"
+                      />
+                      <img src="img/shadow-removebg-preview.png" class="tech" />
+                      <img src="img/Csharp_Logo.png" class="tech" />
+                      <img
+                        src="img/radial-icon-set-2-bluetooth-bluetooth-icon-png-clipart-thumbnail-removebg-preview.png"
+                        class="tech"
+                      />
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </section>
+
+
+
+      <!--Footer-->
+    </section>
+    <section class="footer">
+      <div class="social-links">
+        <a href="https://github.com/BaneTrajkovic/Project-VeloCity"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://projectvelocity2023.wordpress.com/"
+          ><i class="fa-brands fa-wordpress"></i
+        ></a>
+      </div>
+
+      <ul class="list">
+        <li class="nav-item">
+          <a href="/lit.html" class="nav-link">Research</a>
+        </li>
+        <li class="nav-item">
+          <a href="/hci.html" class="nav-link">HCi</a>
+        </li>
+        <li class="nav-item">
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/requirements.html" class="nav-link">Requirements</a>
+        </li>
+        <li class="nav-item">
+          <a href="/appendix.html" class="nav-link">Appendices</a>
+        </li>
+        <li class="nav-item">
+          <a href="system.html" class="nav-link">System Design</a>
+        </li>
+      </ul>
+      <p class="copyright">2023 All Rights Reserved</p>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
