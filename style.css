@@ -508,6 +508,9 @@ h5 {
   }
 }
 
+h6 {
+  color: white;
+}
 .text-box h2 {
   font-weight: 600;
 }
@@ -541,5 +544,9 @@ h5 {
 }
 
 small {
+  color: white;
+}
+
+.figure-caption{
   color: white;
 }
