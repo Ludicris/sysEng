@@ -190,7 +190,7 @@ h4 {
   font-size: 32px;
   font-weight: 500;
   display: inline-block;
-  padding: 0 50px 5px;
+
   color: white;
 }
 
@@ -552,11 +552,11 @@ small {
 }
 
 .tech {
-  width:300px;
-  height:300px;
+  width: 200px;
+  height: 200px;
 
-/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
-object-fit:scale-down;
+  /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+  object-fit: scale-down;
 }
 
 .hcontainer {
@@ -576,7 +576,7 @@ header {
 }
 .section-heading::before,
 .section-heading::after {
-  content: '';
+  content: "";
   position: absolute;
 }
 .section-heading::before {
@@ -670,4 +670,84 @@ header {
   100% {
     opacity: 1;
   }
+}
+
+.white pre {
+  color: white;
+  display: block;
+  background-color: #282c34;
+  border-radius: 15px;
+}
+
+.accordion {
+  margin: 40px auto;
+  width: 650px;
+  color: white;
+}
+
+.accordion li {
+  list-style: none;
+  width: 100%;
+  margin: 20px;
+  padding: 6px;
+  border-radius: 8px;
+  background: #282c34;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px -1px -1px rgba(255, 255, 255, 0.7);
+}
+
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+label::before {
+  content: "-";
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.accordion .content {
+  color: #fffdd0;
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+  max-height: 400px;
+  padding: 10px 10px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::before {
+  content: "+";
+}
+
+.col-md-6 img {
+  border-radius: 15px;
+  vertical-align: middle;
+  display: tabe-cell;
+  width: 400px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #30e5d0;
+}
+
+a:hover {
+  color: #008575;
 }

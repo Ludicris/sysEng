@@ -57,10 +57,16 @@
               <a href="/requirements.html" class="nav-link">Requirements</a>
             </li>
             <li class="nav-item">
-              <a href="/appendix.html" class="nav-link">Appendices</a>
+              <a href="/implementation.html" class="nav-link">Implementation</a>
             </li>
             <li class="nav-item">
-              <a href="system.html" class="nav-link">UI Design</a>
+              <a href="/requirements.html" class="nav-link">Requirements</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ui.html" class="nav-link">System Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/system.html" class="nav-link">UI Design</a>
             </li>
           </ul>
         </div>
@@ -84,8 +90,9 @@
     <section>
       <div class="container aos-init aos-animate" data-aos="fade-up">
         <div class="row justify-content-center mb-4">
-
-          <h4><br /><br><b>Seamless Experience - User-Flow Led By Intuition</b></h4>
+          <h4>
+            <br /><br /><b>Seamless Experience - User-Flow Led By Intuition</b>
+          </h4>
           <p class="lead">
             The most important aspect in designing an accessibility-driven app
             was crafting something that is led by intuition rather than the set
@@ -96,117 +103,211 @@
             following feedback-oriented design and sequence diagrams, where each
             element of the user-flow was carefully chosen and implemented into a
             cohesive structure we have today.
-            <br>
+            <br />
             <figure class="figure">
-              <img src="/img/System_Architecture_(1).png" class="figure-img img-fluid rounded" />
+              <img
+                src="/img/System_Architecture_(1).png"
+                class="figure-img img-fluid rounded"
+              />
               <figcaption class="figure-caption text-center">
                 System Architecture Diagram
-                <br>
+                <br />
               </figcaption>
             </figure>
           </p>
-          <h4><br /><b>Sequence Diagrams (For system design page)</b></h4>
           <p class="lead">
-            Sequence diagrams will be broken down and explained in multiple
-            segments for better understanding and overall comprehension. They
-            will cover the following main points:
-            <ul>
-                <li>
-                    <p class="lead">
-                        Onboarding
-                    </p>
-                </li>
-                <li>
-                    <p class="lead">
-                        Workouts
-                    </p>
-                    <ul>
-                        <li>
-                            <p class="lead">
-                                New Workouts
-                            </p>
-                        </li>
-                        <li>
-                            <p class="lead">
-                                Saved Workouts
-                            </p>
-                        </li>
-                        <li>
-                            <p class="lead">
-                                Active Workouts
-                            </p>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <p class="lead">
-                      Insights
-                    </p>
-                </li>
-            </ul>
+            To briefly describe each component, we would need to differentiate 4
+            main layers in the application: user, front-end, back-end and
+            storage.
           </p>
-
-          <h4><br><b>On boarding</b></h4>
-          <h6><b>Sensor Integration</b><br></h6>
+          <ul>
+            <li>
+              <p class="lead">
+                User: an actor which interacts with the app, records workouts,
+                checks insights. Design of the app was oriented around the user
+                which required moving the complexity further away and presenting
+                the user with only what’s needed and useful.
+              </p>
+            </li>
+            <li>
+              <p class="lead">
+                Front-end: a bridge between the user and the background
+                processes, uses XAML to compile UI elements and present them in
+                the best way possible to the user. In order to help connecting
+                these user elements with the rest of the app, use of C# Code
+                Behind helped in bridging the gap, this time between front-end
+                and back-end solutions.
+              </p>
+            </li>
+            <li>
+              <p class="lead">
+                Back-end: this is where all the important processes like Speech
+                Recognition, Text-To-Speech, Bluetooth connections, as well as
+                everything else the app has to offer, actually happen.
+              </p>
+            </li>
+            <li>
+              <p class="lead">
+                Storage: in order to save workouts and insights we had to
+                implement a storage system for storing the relevant data for its
+                repeated use. We opted for using CSV text files, and you can
+                find more about this in our section Data Storage, on this
+                website page.
+              </p>
+            </li>
+          </ul>
+          <h4><br /><b>Sequence Diagrams </b></h4>
           <p class="lead">
-            First thing the user needs to do, in order to use this app to the full extent of its capabilities, is simply scanning and selecting the appropriate Bluetooth sensor from the settings page. Although simple and intuitive from user point of view, it required multiple processes in the background in order to achieve this. 
+            Since the app is developed in .NET MAUI framework, all processes,
+            such as compiling XAML code containing layout and appearance
+            information, into platform-specific UI elements are done in the
+            background, allowing for only a single point of contact between the
+            user and the app. Due to the complexity of the project, and
+            considering the fact that the app was built from the ground up in
+            this new framework, we will define more high-level aspects here,
+            while going more into details within the Implementation tab on our
+            website.
           </p>
-          <figure class="figure">
-            <img src="/img/Sensor_Integration_(3).png" class="figure-img img-fluid rounded" />
-            <figcaption class="figure-caption text-center">
-              Sequence Diagram For Sensor Integration using SettingsPage, HeartRatePage and Bluetooth API
-              <br>
-            </figcaption>
-          </figure>
-          <figure class="figure">
-            <img src="/img/Untitled.png" class="figure-img img-fluid rounded" />
-            <figcaption class="figure-caption text-center">
-              User-flow for Sensor Integration
-            </figcaption>
-          </figure>
-
-          <h4><br><b>Workouts</b></h4>
-          <h5><br><b>New Workouts</b></h5>
-          <h6><b>Creating New Workouts For Fast (Re)use</b><br></h6>
-          <p class="lead">Seamless creation of a new workout. The user just needs to set the workout name. select activity type and training intent using two universally-accessible multi-option buttons with Text-To-Speech integration. </p>
-          <figure class="figure">
-            <img src="/img/Creating_New_Workout_(2).png" class="figure-img img-fluid rounded" />
-            <figcaption class="figure-caption text-center">
-              Sequence Diagram for Creating New Workouts For Fast (Re)use
-            </figcaption>
-          </figure>
-          <figure class="figure">
-            <img src="/img/Untitled 1.png" class="figure-img img-fluid rounded" />
-            <figcaption class="figure-caption text-center">
-              User-flow For Creating New Workouts
-            </figcaption>
-          </figure>
-          <p class="lead">
-            There are just 2 pathways from this point, either saving the workout for later use, or following the stream-lined navigation pattern and starting the workout, which will be automatically saved in the process.
-          </p>
-          <h6>
-            <br>
-            <b>Saving New Workout</b>
-          </h6>
-          <p class="lead">In the case the user wants to setup the workouts prior to the exercise, it can seamlessly saved them by a click of a button.</p>
-          <figure class="figure">
-            <img src="/img/Saving_New_Workout.png" class="figure-img img-fluid rounded" />
-            <figcaption class="figure-caption text-center">
-              Sequence Diagram For Saving New Workouts
-            </figcaption>
-          </figure>
-          <figure class="figure">
-            <div class="d-flex justify-content-center">
-
-              <img src="/img/Untitled 2.png" class="figure-img img-fluid rounded" />
+          <!--Table-->
+          <section>
+            <div class="container aos-init aos-animate" data-aos="fade-across">
+              <div class="row justify-content-center mb-4">
+                <h4 class="text-center">Technical Decisions</h4>
+                <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-1">
+                  <div class="tab-content">
+                    <p class="lead">
+                      Following from the above technology research, we came to a
+                      conclusion on the devlopment tools to be used in
+                      Project-Velocity
+                    </p>
+                    <div class="col-x1-12 techtable">
+                      <div class="card bg-dark">
+                        <div class="card-body">
+                          <div class="table-responsive">
+                            <table
+                              class="table table-hover mb-0 text-md-nowratp"
+                            >
+                              <thead>
+                                <tr>
+                                  <th>Term</th>
+                                  <th>Definition</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">XAML Page</th>
+                                  <td>
+                                    Extensible Application Markup Language page,
+                                    mainly used to define the visual contents of
+                                    the app.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">C# Code Behind</th>
+                                  <td>
+                                    C# code corresponding to the XAML Page, used
+                                    mainly for background processes.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Speech Recognition API</th>
+                                  <td>
+                                    Speech-To-Text API adding a new layer of
+                                    interaction within the app.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Text-To-Speech API</th>
+                                  <td>
+                                    Text-To-Speech API which allows additional
+                                    functionalities, going beyond those of a
+                                    screen reader.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Bluetooth API</th>
+                                  <td>
+                                    Bluetooth API conformed to .NET MAUI
+                                    framework, without its own prior integrated
+                                    capability.
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </section>
+  <!--Table-->
+          <p class="lead">
+            The following is the overall sequence diagram which describes how user interacts with the screen and how our functionalities are accomplished in the background. 
+          </p>
+          <figure class="figure">
+            <img
+              src="img/General_Sequence.png"
+              class="figure-img img-fluid rounded"
+            />
             <figcaption class="figure-caption text-center">
-              User-flow for Saving New Workout
+              Overall Sequence Diagram
+              <br />
             </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+    <p class="lead">
+      User’s view only consists of the UI components generated by XAML files and edited by their
+       corresponding C# Code Behind files. Together they allow for seamless updates, navigation, transitions and much more. Code Behind files further allow adding valuable concepts such as Speech Recognition, making use of Android’s own native features, which combined with Text-To-Speech and adapted to our implementation work to provide Virtual Coach experience for our users. With respect to Bluetooth integration, we had to conform to the .NET MAUI framework, due to prior inexistence of its own integrated capability.
+    </p>     
+    <h4><br><b>Data storage</b></h4>
+    <h5><br><b>Adaptability-Oriented Approach</b></h5>
+    <p class="lead">To guarantee maintainability and simplify future upgrades, we decided to use highly efficient and straightforward form of persistent data storage, text files. More specifically, text files in CSV (Comma Separated Values) format. Some of the benefits to this approach were the following:</p>
+    
+    <h6><br><b>Adaptability</b></h6>
+    <p class="lead">Text files in CSV format are compatible and hence supported by wide variety of platforms and programming languages, allowing for greater simplicity when shifting towards future technologies or demands.</p>
+    
+    <h6><br><b>Readability</b></h6>
+    <p class="lead">Files in this format are inherently much more readable than other storage alternatives, enabling future app developers to effortlessly perform modifications, upgrades, as well as resolve any issues that may arise in the process.</p>
+    <h6><br><b>Simple Parsing</b></h6>
+    <p class="lead">Using CSV text files allows for quick data transformation, such as filtering, sorting and similar. The intrinsic simplicity of the parsing also means that we have much lower computational overhead unlike other storage systems. All of this leads to faster execution times of data-related tasks, as well as more optimised use of device resources, which fits great in our implementation.</p>
+    <h5><br><b>Data Schema Design</b></h5> 
+    <p class="lead">
+      Following the aforementioned benefits of using CSV files, such as adaptability, readability and simple parsing, we agreed on keeping them valuable when designing our data schema, which we used for storing workouts and insights about finished exercises. Both workouts and insights are being stored in App Data Directory, with an extension of “.workout.txt” and “.insight.txt” respectively. 
+    </p>
+    <h6><br><b>Workout Data Schema</b></h6>
+    <div class="white">
+
+      <pre>
+          Workout:
+          Name,ActivityType,TrainingIntent
+          
+          Workout Object:
+          Name: String
+          ActivityType: string
+          TrainingIntent: string
+      </pre>
+    </div>
+    <h6><br><b>Insight Data Schema</b></h6>
+    <div class="white">
+
+      <pre>
+        Insight: (using the Workout schema for first field)
+        Workout|hour,minute,second|heartRateData|cadenceData
+        
+        Within Insight, heartRateData/cadenceData:
+        data1,data2,data3... (for bpm/rpm corresponding to each second of the exercise)
+        
+        Insight Object:
+        WorkoutName: string
+        WorkoutActivityType: string
+        WorkoutTrainingIntent: string
+        Duration: TimeOnly(hour,minute,second)
+        HeartRateData: List(int)
+        CadenceData: List(int)
+      </pre>
+    </div>
+  </section>
     <section class="footer">
       <div class="social-links">
         <a href="https://github.com/BaneTrajkovic/Project-VeloCity"

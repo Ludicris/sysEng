@@ -28,6 +28,7 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.12.0.min.js"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="style.css" />
     <title>Group 14</title>
   </head>
@@ -66,10 +67,16 @@
               <a href="/requirements.html" class="nav-link">Requirements</a>
             </li>
             <li class="nav-item">
-              <a href="/appendix.html" class="nav-link">Appendices</a>
+              <a href="/implementation.html" class="nav-link">Implementation</a>
             </li>
             <li class="nav-item">
-              <a href="system.html" class="nav-link">System Design</a>
+              <a href="/requirements.html" class="nav-link">Requirements</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ui.html" class="nav-link">System Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/system.html" class="nav-link">UI Design</a>
             </li>
           </ul>
         </div>
@@ -90,6 +97,7 @@
           />
         </div>
       </div>
+    </section>
 
       <section>
         <div class="container aos-init aos animate" data-aos="fade-up">
@@ -219,9 +227,8 @@
       <section class="p-5">
         <div class="container aos-init aos-animate" data-aos="fade-up">
             <div class="row justify-content-center mb-4">
-                <h4 class="text-center"><br>Bluetooth Implementation</h4>
-                <h5><b><br>Tools and Dependencies</b></h5>
-                <p>Carousel</p>
+                <h3 class="text-center"><br>Bluetooth Implementation</h3>
+                <h4><b><br>Tools and Dependencies</b></h4>
                 <div class="row">
                     <div class="d-flex justify-content-center">
                       <img
@@ -236,6 +243,141 @@
                       />
                     </div>
                   </div>
+                  <h4><b><br>Algorithm walkthrough</b></h4>
+                  <h5><b><br>Checking and Requesting Permissions</b></h5>
+                  <p class="lead">In order to scan, discover and connect to BLE devices, one must ask for bluetooth & location permissions from the target device. 
+                    PermissionsStatus is a Permissions class that allows the app to check and request permissions at run time, it is required for the functioning of this app.</p>
+                    <pre><code>
+                      public async Task<PermissionStatus> RequestBluetoothPermissions()
+                        {
+                            PermissionStatus status = PermissionStatus.Unknown;
+                            try
+                            {
+                                status = await Permissions.RequestAsync<BluetoothPermissions>();
+                            }
+                    #if permission is denied an exception is caught
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Unable to request Bluetooth LE permissions: {ex.Message}.");
+                                await Shell.Current.DisplayAlert($"Unable to request Bluetooth LE permissions", $"{ex.Message}.", "OK");
+                            }
+                            return status
+                    </code></pre>
+                    <p class="lead">Check whether bluetooth permissions have been granted</p>
+                    <pre><code>
+        PermissionStatus permissionStatus = await BluetoothLEService.CheckBluetoothPermissions();
+        if(permissionStatus != PermissionStatus.Granted)
+        {
+            permissionStatus = await BluetoothLEService.RequestBluetoothPermissions();
+            if(permissionStatus != PermissionStatus.Granted)
+            {
+                await Shell.Current.DisplayAlert($"Bluetooth LE permissions", $"Bluetooth LE permissions are not granted.", "OK");
+                return;
+            }
+        }
+                    </code></pre>
+                    <p class="lead"> Check whether bluetooth is one & available on the device</p>
+                    <pre><code>
+                     if (!BluetoothLEService.BluetoothLE.IsAvailable || BluetoothLEService.BluetoothLE.State != BluetoothState.On)
+        {
+            Console.WriteLine($"Bluetooth is missing.");
+            await Shell.Current.DisplayAlert($"Bluetooth", $"Bluetooth is missing.", "OK");
+            return;
+        }
+try
+        {
+            if (!BluetoothLEService.BluetoothLE.IsOn)
+            {
+                await Shell.Current.DisplayAlert($"Bluetooth is not on", $"Please turn Bluetooth on and try again.", "OK");
+                return;
+            }
+                    </code></pre>
+                    <h5><b><br>Starting scan</b></h5>
+                    <p class="lead">Once the permissions have been accepted, the app can start scanning<br>
+                      <i>deviceCandidates</i> represents the list of devices that have been discovered by the <i>BluetoothLEService.ScanForDevicesAsync()</i></p>
+                      <pre><code>
+          List<DeviceCandidate> deviceCandidates = await BluetoothLEService.ScanForDevicesAsync();
+                      </code></pre>
+                      <p class="lead">System will scan for 4 seconds before timing out</p>
+                      <pre><code>
+                        BluetoothLE = CrossBluetoothLE.Current;
+                        Adapater = CrossBluetoothLE.Current.Adapater;
+                        Adapter.ScanTimeout = 4000; //ms
+                      </code></pre>
+                      <div class="row">
+                        <div class="d-flex justify-content-center mb-3">
+                          <img src="img/sun.png" class="img-fluid shadow-sm" />
+                        </div>
+                      </div>
+                      <p class="lead">If sensors/BLE devices are found the deviceCandidate list will be represented here as a grid of devices with 
+                        each row being each devices name and Guid (global unique identifier)</p>
+                        <br>
+                        <pre><code>
+                          &lt;DataTemplate x:DataType=&quot;model:DeviceCandidate&quot;&gt;
+                          &lt;Grid Padding=&quot;10&quot;&gt;
+                              &lt;Frame BorderColor=&quot;#DDDDDD&quot;
+                                     HasShadow=&quot;True&quot;
+                                     Padding=&quot;10&quot;
+                                     Background=&quot;Black&quot;
+                                     CornerRadius=&quot;10&quot;
+                                     IsClippedToBounds=&quot;True&quot;&gt;
+                          &lt;VerticalStackLayout Padding=&quot;8&quot;&gt;
+                              &lt;Label Style=&quot;{StaticResource BaseLabel}&quot; Text=&quot;{Binding Name}&quot; /&gt;
+                               &lt;Label Style=&quot;{StaticResource MicroLabel}&quot; Text=&quot;{Binding Id}&quot; /&gt;
+                          &lt;/VerticalStackLayout&gt;
+                              &lt;/Frame&gt;
+                           &lt;/Grid&gt;
+                        </code></pre>
+                  <p class="lead">Once a sensor has been selected it will navigate to its correspondoning page (Heart/Sensor) and you will 
+                    be given the ability to connect/disconnect (see above) </p>
+
+                    <h5><b><br>Connectig to a device</b></h5>
+                    <p class="lead">The adapter will connect to a device given a known global user identifier (Guid) which is 
+                      extracted from BluetoothLSEService.NewDeviceCandidateFromHomePage.Id</p>
+                      <pre><code>
+BluetoothLSEService.Device = await 
+BluetoothLSEService.Adapter.ConnectToKnownDeviceAsync(BluetoothLSEService.NewDeviceCandidateFromHomePage.Id);
+                      </code></pre>
+                    <h5><b><br>Disconnecting from a device </b></h5>
+                    <p class="lead">Like before, the adapter will disconnect from a device given a known device name which is extracted from BluetoothLSEService.Device</p>
+                      <pre><code>
+await BluetoothLSEService.Adapter.DisconnectDeviceAsync(BluetoothLSEService.Device);
+                      </code></pre>
+                    <h5><b><br>Getting characteristics</b></h5>
+                    <p class="lead">Once a connection has been made, the system can extract specific characterisitcs from the BLE device given general identifiers. Below are our full list of Guids stored in class HeartRateIdentifiers</p>
+                      <pre><code>
+class HeartRateIdentifiers
+
+    {
+    // primary service for heart rate 8CE5CC02-0A4D-11E9-AB14-D663BD873D93"
+    //public static Guid HeartRateService = Guid.ParseExact("0000180d-0000-1000-8000-00805f9b34fb", "d");
+    public static Guid[] HeartRateServiceUuids { get; private set; } = new Guid[] { new Guid("0000180d-0000-1000-8000-00805f9b34fb") }; //"Heart Rate Service"
+    public static Guid HeartRateServiceUuid { get; private set; } = new Guid("0000180d-0000-1000-8000-00805f9b34fb"); //"Heart Rate Service"
+    public static Guid HeartRateMeasurementCharacteristicUuid { get; private set; } = new Guid("00002a37-0000-1000-8000-00805f9b34fb"); //"Heart Rate Measurement"
+    public static Guid BatteryLevelServiceUuid { get; private set; } = new Guid("0000180f-0000-1000-8000-00805f9b34fb"); //"Battery Service"
+    public static Guid BatteryLevelCharacteristicUuid { get; private set; } = new Guid("00002a19-0000-1000-8000-00805f9b34fb"); //"Battery Level"
+    }
+                      </code></pre>
+                      <p class="lead"> Heart rate information being extracted from heart sensor with provided characteristic Guids</p>
+                      <pre><code>
+ HeartRateMeasurementCharacteristic = await HeartRateService.GetCharacteristicAsync(HeartRateIdentifiers.HeartRateMeasurementCharacteristicUuid);
+                      </code></pre>
+                      <p class="lead">Given the heart rate updates throughout the workout, system must continously extract heart rate 
+                        information from the sensor as long as there is a stable connection</p>
+                      <pre><code>
+                        if (HeartRateMeasurementCharacteristic.CanUpdate)
+                        {
+                            Title = $"{BluetoothLSEService.Device.Name}";
+
+                            #region save device id to storage
+                            await SecureStorage.Default.SetAsync("device_name", $"{BluetoothLSEService.Device.Name}");
+                            await SecureStorage.Default.SetAsync("device_id", $"{BluetoothLSEService.Device.Id}");
+                            #endregion save device id to storage
+
+                            HeartRateMeasurementCharacteristic.ValueUpdated += HeartRateMeasurementCharacteristic_ValueUpdated;
+                            await HeartRateMeasurementCharacteristic.StartUpdatesAsync();
+                        } 
+                      </code></pre>
             </div>
         </div>
       </section>
@@ -280,5 +422,7 @@
     <script>
       AOS.init();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
   </body>
 </html>

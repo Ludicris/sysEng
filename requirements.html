@@ -57,10 +57,16 @@
               <a href="/requirements.html" class="nav-link">Requirements</a>
             </li>
             <li class="nav-item">
-              <a href="/appendix.html" class="nav-link">Appendices</a>
+              <a href="/implementation.html" class="nav-link">Implementation</a>
             </li>
             <li class="nav-item">
-              <a href="system.html" class="nav-link">System Design</a>
+              <a href="/requirements.html" class="nav-link">Requirements</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ui.html" class="nav-link">System Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/system.html" class="nav-link">UI Design</a>
             </li>
           </ul>
         </div>
@@ -82,23 +88,168 @@
       </div>
     </section>
     <br />
-    <section>
+    <section id="learn" class="p-5">
       <div class="container aos-init aos-animate" data-aos="fade-down">
-        <div class="row justify-content-center mb-4">
-          <h1 class="text-center">
-            <span class="m-head">Project Background</span>
-          </h1>
-          <p class="lead">
-            As it currently stands, assistive technology is not prevalent in the
-            fitness space. Most tech available are expensive and difficult to
-            configure making it only accessible to the select elite and
-            recreational athletes worldwide. Project “VeloCity” aims to solve
-            that by making the benefits of fitness technology accessible to
-            everyone.
-          </p>
+        <div class="row justify-content-center align-items-center mb-4">
+          <div class="col-md-6">
+            <img
+              src="img/_84476812_markpollock.jpg"
+              class="img-fluid"
+              border-radius="15px"
+            />
+          </div>
+          <div class="col-md-6">
+            <h1>
+              <br />
+              Project Background and Partner Introduction
+            </h1>
+            <p class="lead">
+              <br />
+              As it currently stands, assistive technology is not prevalent in
+              the fitness space. Most tech available are expensive and difficult
+              to configure making it only accessible to the select elite and
+              recreational athletes worldwide. Project “VeloCity” aims to solve
+              that by making the benefits of fitness technology accessible to
+              everyone.<br /><br />
+              We are working with Microsoft, an innovative American technology
+              company with over 200,000 employees. They are involved in almost
+              every aspect of the technology realm, from operating systems to
+              cloud services and office automation.<br /><br />
+              They came to us with a real life situation. Mark Pollock, a blind
+              and disabled Northern Irish athlete who uses technology to combat
+              his disabilities and continue practising sport to his maximum. He
+              approached Microsoft because there was no fitness app in the
+              market that catered for the visually impaired; and Microsoft set
+              out to help him.<br /><br />
+              Our task is to rework and develop said app, keeping user
+              accessibility as a priority. For this reason, functionalities such
+              as an accessible GUI and voice announcements are key.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
+    <section id="learn" class="p-5">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <h4><b>Project Goals</b></h4>
+          <p class="lead">
+            Project “VeloCity” aims to solve the current lack of assistive
+            technology in the fitness tracking market by making the benefits of
+            fitness technology accessible to everyone.<br /><br />
+          </p>
+          <p class="lead">
+            <b>How did we collect requirements?</b>
+            <br />
+            Microsoft already presented us with some general requirements
+            designed with Mark’s help.
+            <br />
+            We created a <a href="https://forms.office.com/r/Lget7cvR01">survey</a> we sent
+            out to several British sports associations for disabled people, such
+            as:
+            <ul>
+              <li>
+                <p class="lead">
+                  British Blind Sport
+                </p>
+              </li>
+              <li>
+                <p class="lead">
+                  Camden People first
+                </p>
+              </li>
+              <li>
+                <p class="lead">
+                  Cerebral Palsy Sport
+                </p>
+              </li>
+              <li>
+                <p class="lead">
+                  Limb Power
+                </p>
+              </li>
+              <li>
+                <p class="lead">
+                  Wheel Power
+                </p>
+              </li>
+              <li>
+                <p class="lead">
+                  UK Sports Association
+                </p>
+              </li>
+            </ul>
+          </p>
+          <h4><b>Survey results</b></h4>
+          <p class="lead">
+            Their feedback has given us a valuable insight into what users believe 
+            is lacking from current fitness technology in terms of accessibility. 
+            For example, these are some of the insights from the replies to the survey:
+          </p>
+          <div class="d-flex justify-content-center">
+
+            <figure class="figure">
+              <img src="img/graphs.png" class="figure-img img-fluid rounded" />
+              <figcaption class="figure-caption text-center">
+               Graphs showing survey results
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <h1 class="text-center">
+          MoSCoW List
+        </h1>
+        <p class="lead text-center">Once we finished researching the requirements of our project, we had a meeting with our clients to discuss the MoSCoW requirements</p>
+        <ul class="accordion">
+          <li>
+            <input type="radio" name="accordion" id="first" checked />
+            <label for="first">Must Have</label>
+            <div class="content">
+              <p class="lead">
+                Connectivity to Bluetooth sensors<br /><br />Text-to-Speech (voice
+                announcements)<br /><br />Ability to create workouts and store the
+                data
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="second" />
+            <label for="second">Should Have</label>
+            <div class="content">
+              <p class="lead">
+                Speech-to-text<br /><br />Insights page with graphs to track
+                metrics<br /><br />Easy start-up once configured for the first
+                time
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="third" />
+            <label for="third">Could Have</label>
+            <div class="content">
+              <p class="lead">
+                Ability to store favourite workouts<br /><br />General insights of
+                the average workout time
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="fourth" />
+            <label for="fourth">Wont Have</label>
+            <div class="content">
+              <p class="lead">Virtual coach</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!--Footer-->
     <section class="footer">
       <div class="social-links">
