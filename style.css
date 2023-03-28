@@ -805,3 +805,29 @@ figure img {
 .tabs-custom {
   text-align: left;
 }
+
+.cap {
+  color: black;
+}
+
+.l-container {
+  text-align: center;
+}
+
+.l-center {
+  display: inline-block;
+  text-align: left;
+}
+
+img:hover {
+  color: #424242;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  opacity: 1;
+  transform: scale(1.15);
+  -ms-transform: scale(1.15); /* IE 9 */
+  -webkit-transform: scale(1.15); /* Safari and Chrome */
+}

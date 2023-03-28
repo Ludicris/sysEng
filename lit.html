@@ -54,13 +54,13 @@
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
+              <a href="/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
               <a href="/lit.html" class="nav-link">Research</a>
             </li>
             <li class="nav-item">
               <a href="/hci.html" class="nav-link">HCi</a>
-            </li>
-            <li class="nav-item">
-              <a href="/index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
               <a href="/requirements.html" class="nav-link">Requirements</a>
@@ -72,10 +72,16 @@
               <a href="/requirements.html" class="nav-link">Requirements</a>
             </li>
             <li class="nav-item">
-              <a href="/ui.html" class="nav-link">System Design</a>
+              <a href="/ui.html" class="nav-link">Sys.Design</a>
             </li>
             <li class="nav-item">
               <a href="/system.html" class="nav-link">UI Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/evaluation.html" class="nav-link">Testing</a>
+            </li>
+            <li class="nav-item">
+              <a href="/appendix.html" class="nav-link">Appendix</a>
             </li>
           </ul>
         </div>
@@ -153,138 +159,170 @@
       <div class="container aos-init aois-animate" data-aos="fade-up">
         <div class="row justify-content-center mb-4">
           <h1 class="text-center">
-            Technology Research 
-            <br>
-            <br>
+            Technology Research
+            <br />
+            <br />
           </h1>
-            <div class="v-tab">
-              <div class="v-content">
-                <input type="radio" name="slider" checked id="home" />
-                <input type="radio" name="slider" id="blog" />
-                <input type="radio" name="slider" id="help" />
-                <input type="radio" name="slider" id="code" />
-                <input type="radio" name="slider" id="about" />
-                <div class="list">
-                  <label for="home" class="home" >
-                    <span class="title">XAML</span>
-                  </label>
-                  <label for="blog" class="blog">
-                    <span class="title">C#</span>
-                  </label>
-                  <label for="help" class="help">
-                    <span class="title">Plugins</span>
-                  </label>
-                  <label for="code" class="code">
-                    <span class="title">.NET MAUI</span>
-                  </label>
-                  <div class="slider"></div>
+          <div class="v-tab">
+            <div class="v-content">
+              <input type="radio" name="slider" checked id="home" />
+              <input type="radio" name="slider" id="blog" />
+              <input type="radio" name="slider" id="help" />
+              <input type="radio" name="slider" id="code" />
+              <input type="radio" name="slider" id="about" />
+              <div class="list">
+                <label for="home" class="home">
+                  <span class="title">XAML</span>
+                </label>
+                <label for="blog" class="blog">
+                  <span class="title">C#</span>
+                </label>
+                <label for="help" class="help">
+                  <span class="title">Plugins</span>
+                </label>
+                <label for="code" class="code">
+                  <span class="title">.NET MAUI</span>
+                </label>
+                <div class="slider"></div>
+              </div>
+              <div class="text-content">
+                <div class="home text">
+                  <h5><b>XAML</b></h5>
+                  <p class="lead">
+                    <img
+                      src="img/png-transparent-xamarin-mobile-app-development-native-net-framework-c-android-blue-angle-calendar-removebg-preview.png"
+                      height="120"
+                      align="right"
+                    />
+                    XAML is a powerful markup language primarily used to build
+                    the user interfaces for our application We chose it as it
+                    allows for better maintability of code and reusability of
+                    components making the code more Readable for future devs.
+                    Furthermore, it is an ideal choice for creating dynamic UIs
+                    across multiple platforms - should the app expand to other
+                    OS platforms.
+                    <br />
+                    <br />
+                  </p>
                 </div>
-                <div class="text-content">
-                  <div class="home text">
-                    <h5><b>XAML</b></h5>
-                    <p class="lead">
-                      <img
-                        src="img/png-transparent-xamarin-mobile-app-development-native-net-framework-c-android-blue-angle-calendar-removebg-preview.png"
-                        height="120"
-                        align="right"
-                      />
-                      XAML is a powerful markup language primarily used to build
-                      the user interfaces for our application We chose it as it
-                      allows for better maintability of code and reusability of
-                      components making the code more Readable for future devs.
-                      Furthermore, it is an ideal choice for creating dynamic
-                      UIs across multiple platforms - should the app expand to
-                      other OS platforms.
-                      <br />
-                      <br />
-                    </p>
-                    
-                  </div>
-                  <div class="blog text">
-                    <h5><b>C#</b></h5>
-                    <p class="lead">
-                      <img
-                        src="img/Csharp_Logo.png"
-                        height="190"
-                        align="left"
-                      />
-                      On the contrary, C# is primarily used to handle the
-                      backend communications of the platform. Its support for
-                      asynchronous programming made it very useful for
-                      programming features that required the use if await and
-                      async features and its strong community support allowed us
-                      to implement features not yet incorporated into .NET MAUI
-                      such as bluetooth capabilities.
-                    </p>
+                <div class="blog text">
+                  <h5><b>C#</b></h5>
+                  <p class="lead">
+                    <img src="img/Csharp_Logo.png" height="190" align="left" />
+                    On the contrary, C# is primarily used to handle the backend
+                    communications of the platform. Its support for asynchronous
+                    programming made it very useful for programming features
+                    that required the use if await and async features and its
+                    strong community support allowed us to implement features
+                    not yet incorporated into .NET MAUI such as bluetooth
+                    capabilities.
+                  </p>
                 </div>
                 <div class="help text">
                   <h5><b>Plugins</b></h5>
-                  <br>
-                  <img src="img/-Sy5s66au-removebg-preview.png"
-                  height="160"
-                  align="right">
+                  <br />
+                  <img
+                    src="img/-Sy5s66au-removebg-preview.png"
+                    height="160"
+                    align="right"
+                  />
 
-                        <p class="lead">
-                          <b>Plugin.BLE </b>- Bluetooth capabilities<br>
-                        </p>
-                        <p class="lead">
-                          <b>CommunityToolkit.Maui</b> - Animations & Custom Views<br>
-                        </p>
-                        <p class="lead">
-                          <b>CommunityToolkit.Mvvm</b> - Observable objects (sensor data)<br>
-                        </p>
-                        <p class="lead">
-                          <b>Syncfusion.Maui.Charts</b> - Workout charts
-                        </p>
-
+                  <p class="lead">
+                    <b>Plugin.BLE </b>- Bluetooth capabilities<br />
+                  </p>
+                  <p class="lead">
+                    <b>CommunityToolkit.Maui</b> - Animations & Custom Views<br />
+                  </p>
+                  <p class="lead">
+                    <b>CommunityToolkit.Mvvm</b> - Observable objects (sensor
+                    data)<br />
+                  </p>
+                  <p class="lead">
+                    <b>Syncfusion.Maui.Charts</b> - Workout charts
+                  </p>
                 </div>
                 <div class="code text">
                   <h5><b>.NET MAUI</b></h5>
-                  <br>
+                  <br />
                   <p class="lead">
-                 <img src="img/shadow-removebg-preview.png"
-                  height="160"
-                  align="right">
-                    .NET MAUI (Multi-platform App UI) is a cross-platform framework for building mobile & desktop applications. It allows devs to write code once and deploy it over several platforms including IOS, Android & Windows. It also allows for modern and flexible architecturs and features custom fonts and shapes which is useful when tailoring an app to be used by the impaired.
+                    <img
+                      src="img/shadow-removebg-preview.png"
+                      height="160"
+                      align="right"
+                    />
+                    .NET MAUI (Multi-platform App UI) is a cross-platform
+                    framework for building mobile & desktop applications. It
+                    allows devs to write code once and deploy it over several
+                    platforms including IOS, Android & Windows. It also allows
+                    for modern and flexible architecturs and features custom
+                    fonts and shapes which is useful when tailoring an app to be
+                    used by the impaired.
                   </p>
-
                 </div>
               </div>
             </div>
           </div>
           <br />
-          <br /> 
+          <br />
+        </div>
       </div>
     </section>
 
     <section class="p-5">
       <div class="container aos-init aois-animate" data-aos="fade-up">
         <div class="row justify-content-center mb-4">
-          <h4 class="text-center">
-            .NET MAUI Integration
-          </h4>
+          <h4 class="text-center">.NET MAUI Integration</h4>
           <p class="lead">
-            When we were about to start making changes to the app, it was suggested to us by the Microsoft team that we could switch to MAUI., which is the next generation of Xamarin, a framework that aims to provide a single cross-platform development experience for building native mobile, desktop, and web applications using .NET.
-<br>
-<br>
-Here are some pros of switching to .NET MAUI from Xamarin:
-<ul>
-  <li><p class="lead">
-    Better performance: MAUI uses the latest technology to provide better performance and faster application start-up times than Xamarin.
-  </p></li>
-  <li><p class="lead">
-    Improved design and GUI: MAUI offers more beautiful and responsive animations and graphics for the GUI.
-  </p></li>
-  <li><p class="lead">
-    Single codebase: MAUI allows developers to create a single codebase for building apps across multiple platforms (such as Android, iOS, macOS, and Windows) with only minimal adaptations required in the code
-  </p></li>
-  <li><p class="lead">
-    Better integration with .NET ecosystem: MAUI provides better integration with the .NET ecosystem, making it easier to use popular .NET libraries, tools, and frameworks. This proves extremely useful as we are going to use several libraries to implement functionalities such as voice recognition and Bluetooth sensor connectivity.
-  </p></li>
-  <li><p class="lead">
-    Future-proof: With MAUI, we can build future-proof app, meaning that they will continue to work even as new devices and operating systems are released.
-  </p></li>
-</ul>
+            When we were about to start making changes to the app, it was
+            suggested to us by the Microsoft team that we could switch to MAUI.,
+            which is the next generation of Xamarin, a framework that aims to
+            provide a single cross-platform development experience for building
+            native mobile, desktop, and web applications using .NET.
+            <br />
+            <br />
+            Here are some pros of switching to .NET MAUI from Xamarin:
+          </p>
+
+          <ul>
+            <li>
+              <p class="lead">
+                Better performance: MAUI uses the latest technology to provide
+                better performance and faster application start-up times than
+                Xamarin.
+              </p>
+            </li>
+            <li>
+              <p class="lead">
+                Improved design and GUI: MAUI offers more beautiful and
+                responsive animations and graphics for the GUI.
+              </p>
+            </li>
+            <li>
+              <p class="lead">
+                Single codebase: MAUI allows developers to create a single
+                codebase for building apps across multiple platforms (such as
+                Android, iOS, macOS, and Windows) with only minimal adaptations
+                required in the code
+              </p>
+            </li>
+            <li>
+              <p class="lead">
+                Better integration with .NET ecosystem: MAUI provides better
+                integration with the .NET ecosystem, making it easier to use
+                popular .NET libraries, tools, and frameworks. This proves
+                extremely useful as we are going to use several libraries to
+                implement functionalities such as voice recognition and
+                Bluetooth sensor connectivity.
+              </p>
+            </li>
+            <li>
+              <p class="lead">
+                Future-proof: With MAUI, we can build future-proof app, meaning
+                that they will continue to work even as new devices and
+                operating systems are released.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -292,42 +330,57 @@ Here are some pros of switching to .NET MAUI from Xamarin:
     <section>
       <div class="container aos-init aos-animate" data-aos="fade-across">
         <div class="row justify-content-center mb-4">
-            <h4 class="text-center">Technical Decisions</h4>
-            <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-1">
-              <div class="tab-content">
-                <p class="lead">Following from the above technology research, we came to a conclusion on the devlopment tools to be used in Project-Velocity</p>
-                <div class="col-x1-12 techtable">
-                  <div class="card bg-dark">
-                    <div class="card-body">
-                      <div class="table-responsive">
-                        <table class="table table-hover mb-0 text-md-nowratp">
-                          <thead>
-                            <tr>
-                              <th>Technology</th>
-                              <th>Decision</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">Langauges</th>
-                              <td>XAML, C#</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Plugins</th>
-                              <td>Plugin.BLE, CommunityToolkit.Maui, CommunityToolkit.Mvvm, Syncfusion.Maui.Charts</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">API</th>
-                              <td>Microsoft Azure</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+          <h4 class="text-center">Technical Decisions</h4>
+          <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-1">
+            <div class="tab-content">
+              <p class="lead">
+                Following from the above technology research, we came to a
+                conclusion on the devlopment tools to be used in
+                Project-Velocity
+              </p>
+              <div class="col-x1-12 techtable">
+                <div class="card bg-dark">
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-hover mb-0 text-md-nowratp">
+                        <thead>
+                          <tr>
+                            <th>Technology</th>
+                            <th>Decision</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Langauges</th>
+                            <td>XAML, C#</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Plugins</th>
+                            <td>
+                              Plugin.BLE, CommunityToolkit.Maui,
+                              CommunityToolkit.Mvvm, Syncfusion.Maui.Charts
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Services</th>
+                            <td>Microsoft Azure</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Framework</th>
+                            <td>.NET MAUI</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Platform</th>
+                            <td>Android</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </section>
@@ -341,7 +394,7 @@ Here are some pros of switching to .NET MAUI from Xamarin:
             <br />
             <video width="600" controls>
               <source src="video/lit.mp4" type="video/mp4" />
-              <br>
+              <br />
             </video>
           </div>
         </div>
@@ -360,22 +413,34 @@ Here are some pros of switching to .NET MAUI from Xamarin:
 
       <ul class="list">
         <li class="nav-item">
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
           <a href="/lit.html" class="nav-link">Research</a>
         </li>
         <li class="nav-item">
           <a href="/hci.html" class="nav-link">HCi</a>
         </li>
         <li class="nav-item">
-          <a href="/index.html" class="nav-link">Home</a>
+          <a href="/requirements.html" class="nav-link">Requirements</a>
+        </li>
+        <li class="nav-item">
+          <a href="/implementation.html" class="nav-link">Implementation</a>
         </li>
         <li class="nav-item">
           <a href="/requirements.html" class="nav-link">Requirements</a>
         </li>
         <li class="nav-item">
-          <a href="/appendix.html" class="nav-link">Appendices</a>
+          <a href="/ui.html" class="nav-link">Sys.Design</a>
         </li>
         <li class="nav-item">
-          <a href="system.html" class="nav-link">System Design</a>
+          <a href="/system.html" class="nav-link">UI Design</a>
+        </li>
+        <li class="nav-item">
+          <a href="/evaluation.html" class="nav-link">Testing</a>
+        </li>
+        <li class="nav-item">
+          <a href="/appendix.html" class="nav-link">Appendix</a>
         </li>
       </ul>
       <p class="copyright">2023 All Rights Reserved</p>
