@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c25aa32a21.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Group 14</title>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+      <div class="container">
+        <img
+          width="150"
+          src="img\Picture2.png"
+          class="d-inline-block align-middle mr-2"
+        />
+        <a href="#" class="navbar-brand">VeloCity</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/lit.html" class="nav-link">Research</a>
+            </li>
+            <li class="nav-item">
+              <a href="/hci.html" class="nav-link">HCi</a>
+            </li>
+            <li class="nav-item">
+              <a href="/requirements.html" class="nav-link">Requirements</a>
+            </li>
+            <li class="nav-item">
+              <a href="/implementation.html" class="nav-link">Implementation</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ui.html" class="nav-link">Sys.Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/system.html" class="nav-link">UI Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="/evaluation.html" class="nav-link">Testing</a>
+            </li>
+            <li class="nav-item">
+              <a href="/appendix.html" class="nav-link">Appendix</a>
+            </li>
+            <li class="nav-item">
+              <a href="/conclusion.html" class="nav-link">Evaluation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Showcase-->
+    <section class="bg-dark text-light p-2 text-center text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Evaluation</h1>
+          </div>
+          <img
+            class="img-fluid w-50 ms-auto d-none d-sm-block"
+            src="img/undraw_personal_trainer_re_cnua.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="aos-init aos-animate" data-aos="fade-up">
+      <div class="row justify-content-center mb-4">
+        <div class="col-x1-14">
+          <h1 class="text-center">MoSCoW List Achievement</h1>
+          <table class="table text-center table-center">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Description</th>
+                <th scope="col">Priority</th>
+                <th scope="col">State</th>
+                <th scope="col">Contributors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <th scope="row">Connectivity to Bluetooth sensors</th>
+                <th scope="row">Must</th>
+                <th scope="row">✓</th>
+                <th scope="row">Seun</th>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <th scope="row">Text-to-Speech (voice announcements)</th>
+                <th scope="row">Must</th>
+                <th scope="row">✓</th>
+                <th scope="row">Ramon</th>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <th scope="row">
+                  Ability to create workouts and store the data
+                </th>
+                <th scope="row">Must</th>
+                <th scope="row">✓</th>
+                <th scope="row">Bane, Hsu</th>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <th scope="row">Speech-to-text</th>
+                <th scope="row">Should</th>
+                <th scope="row">✓</th>
+                <th scope="row">Bane</th>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <th scope="row">Insights page with graphs to track metrics</th>
+                <th scope="row">Should</th>
+                <th scope="row">✓</th>
+                <th scope="row">Hsu</th>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <th scope="row">
+                  Easy start-up once configured for the first time
+                </th>
+                <th scope="row">Should</th>
+                <th scope="row">✘</th>
+                <th scope="row">N/A</th>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <th scope="row">Ability to store favourite workouts</th>
+                <th scope="row">Could</th>
+                <th scope="row">✓</th>
+                <th scope="row">Bane</th>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <th scope="row">
+                  General insights of the average workout time
+                </th>
+                <th scope="row">Could</th>
+                <th scope="row">✓</th>
+                <th scope="row">Bane</th>
+              </tr>
+            </tbody>
+          </table>
+          <h1 class="text-center"><br />Individual Contribution</h1>
+          <table class="table text-center table-center">
+            <thead>
+              <tr>
+                <th scope="col">Work Packages</th>
+                <th scope="col">Seun</th>
+                <th scope="col">Bane</th>
+                <th scope="col">Hsu</th>
+                <th scope="col">Ramon</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Partners liason</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+              </tr>
+              <tr>
+                <th scope="row">Requirement analysis</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+              </tr>
+              <tr>
+                <th scope="row">Research</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+              </tr>
+              <tr>
+                <th scope="row">Coding</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+              </tr>
+              <tr>
+                <th scope="row">Testing</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+              </tr>
+              <tr>
+                <th scope="row">Report Website</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+              </tr>
+              <tr>
+                <th scope="row">Video Editing</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+              </tr>
+              <tr>
+                <th scope="row">Overall</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+                <th scope="row">25%</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" class="p-5">
+      <div class="container aos-init aois-animate" data-aos="fade-up">
+        <div class="row justify-content-center mb-4">
+          <h1 class="text-center">
+            Critical Evaluation
+            <br />
+            <br />
+          </h1>
+          <div class="v-tab">
+            <div class="v-content">
+              <input type="radio" name="slider" checked id="home" />
+              <input type="radio" name="slider" id="blog" />
+              <input type="radio" name="slider" id="help" />
+              <input type="radio" name="slider" id="code" />
+              <input type="radio" name="slider" id="about" />
+              <input type="radio" name="slider" id="extra" />
+              <div class="list">
+                <label for="home" class="home">
+                  <span class="title">User-Experience</span>
+                </label>
+                <label for="blog" class="blog">
+                  <span class="title">Functionality</span>
+                </label>
+                <label for="help" class="help">
+                  <span class="title">Stability-Efficiency</span>
+                </label>
+                <label for="code" class="code">
+                  <span class="title">Compatibility</span>
+                </label>
+                <label for="about" class="about">
+                  <span class="title">Maintainability</span>
+                </label>
+                <label for="extra" class="extra">
+                  <span class="title">Project Management</span>
+                </label>
+                <div class="slider"></div>
+              </div>
+              <div class="text-content">
+                <div class="home text">
+                  <h1><b>User-Experience</b></h1>
+                  <p class="lead">
+                    One of the primary requirements from our clients was to
+                    ensure that the app development was centered around the
+                    needs of our target user-base, which largely consists of
+                    people with impairments. With this in mind, we consistently
+                    evaluated our project from their perspective throughout the
+                    development process.
+                    <br /><br />
+                    To make the app more accessible to visually impaired
+                    individuals, we incorporated large text and icons. We also
+                    added voice callouts to serve as a virtual assistant and to
+                    make the workout process more user-friendly. Additionally,
+                    we enabled voice control to allow users to ask for sensor
+                    information and workout details while exercising.
+                    <br /><br />
+                    In order to promote user safety, we implemented callouts
+                    that notify users when their heart rate falls outside of the
+                    intended range. These callouts also provide helpful warnings
+                    such as 'Slow down' or 'Speed up' to encourage users to
+                    modify their workout accordingly.
+                    <br />
+                    <br />
+                  </p>
+                </div>
+                <div class="blog text">
+                  <h1><b>Functionality</b></h1>
+                  <p class="lead">
+                    Another target for the project was to ensure optimal
+                    functionality. The minimum set by our client was to ensure
+                    that a user could go through one whole iteration of the app
+                    in which they will be able to:
+                  </p>
+
+                  <ul>
+                    <li><p class="lead">Connect sensors</p></li>
+                    <li><p class="lead">Start a workout</p></li>
+                    <li>
+                      <p class="lead">See their heart rate information</p>
+                    </li>
+                    <li><p class="lead">Finish a workout</p></li>
+                    <li><p class="lead">See their health data</p></li>
+                  </ul>
+                  <p class="lead">
+                    We were able to fulfill all of the above whilst also adding
+                    in extra functionality to ensure a good user-experience thus
+                    fulfilling all the requirements from our client
+                  </p>
+                </div>
+                <div class="help text">
+                  <h1><b>Stability-Efficiency</b></h1>
+                  <p class="lead">
+                    There are a few areas of concern regarding our app that
+                    require attention. Firstly, we have identified an issue
+                    related to saving workouts that needs to be resolved. When
+                    saving more than two workouts, the app crashes due to a
+                    threshold being exceeded in the number of graphs stored in
+                    the app. We have traced this issue to the Syncfusion plugin
+                    we were using, and it appears to be a limitation of the
+                    trial version of the plugin. We acknowledge that this
+                    instability in graph storage is problematic and will require
+                    a robust solution.
+                    <br /><br />
+                    Another concern we have is related to the use of third-party
+                    services to implement some of the app's features. For
+                    instance, we require Microsoft Azure and Syncfusion for
+                    functionalities like voice control and graph rendering,
+                    respectively. While these services enhance the app's
+                    functionality, they are subscription-based, and the costs
+                    may become unmanageable for our clients down the line. We
+                    need to consider alternative options to address this
+                    concern.
+                    <br /><br />
+                    Additionally, we use the Plugin.BLE, a community-developed
+                    plugin, to enable BLE connections as .NET MAUI currently
+                    lacks in-built Bluetooth support. Although this plugin has
+                    proven useful, it is also more prone to bugs than other
+                    plugins. During the development cycle, we encountered
+                    several issues that required resolution. We need to address
+                    these concerns to ensure the app's reliability and
+                    stability.
+                  </p>
+                </div>
+                <div class="code text">
+                  <h1><b>Compatibility</b></h1>
+                  <p class="lead">
+                    We developed the app as per our clients' request, making it
+                    exclusively compatible with Android devices. Although we
+                    utilized a cross-platform framework, the app's features
+                    require platform-specific code, such as Bluetooth, that
+                    would make core features unusable and lead to errors if run
+                    on other platforms.
+                    <br /><br />
+                    Furthermore, the app can be executed locally on an Android
+                    Emulator, but we must highlight that the sensor integration
+                    will be unusable as Bluetooth remains unavailable on
+                    emulators at this time of writing. We are aware that this
+                    may limit the app's accessibility for some users and are
+                    open to exploring alternatives that can provide a more
+                    inclusive experience across different platforms in the
+                    future.
+                  </p>
+                </div>
+                <div class="about text">
+                  <h1><b>Maintainability</b></h1>
+                  <p class="lead">
+                    Our development team primarily utilized the
+                    Model-View-ViewModel architecture to achieve optimal
+                    separation of concerns, resulting in a well-modularized
+                    project. This approach ensures that each component of the
+                    app is independent of others, making it much easier for
+                    future developers to identify and address bugs and improve &
+                    maintain individual features. future.
+                  </p>
+                </div>
+                <div class="extra text">
+                  <h1><b>Project Management</b></h1>
+                  <p class="lead">
+                    Our development team was effectively managed, with a focus
+                    on open communication and collaboration with our clients.
+                    From the project's outset, we organized frequent meetings,
+                    initially on a weekly basis, which all team members attended
+                    regularly. As the project advanced, we recognized the need
+                    to adjust meeting frequency to bi-weekly intervals to ensure
+                    effective time management.
+                    <br /><br />
+                    We utilized Gantt charts and project timelines to
+                    effectively allocate tasks and ensure that we met all
+                    project deadlines. Additionally, our team culture emphasized
+                    mutual support and collaboration, which allowed us to offer
+                    assistance to any team member struggling with their assigned
+                    tasks. This approach facilitated a smooth and efficient
+                    workflow throughout the development cycle.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row justify-content-center mb-4">
+          <h1 class="text-center">Bug List</h1>
+          <table class="table text-center table-center">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Bug Description</th>
+                <th>Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <th scope="row">1</th>
+              <th scope="row">
+                When graphs are enabled, the app will crash once more than two
+                workouts are created
+              </th>
+              <th scope="row">High</th>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row justify-content-center mb-4">
+          <h1 class="text-center">Future work</h1>
+          <p class="lead text-center">
+            In the future, we would like to add more accessibility features to
+            the app to allow for a more streamlined experience for our users. A
+            key feature would be to allow for the enabling of callouts with
+            regards to the graphs, meaning the user would be able to tap on a
+            specific area of the graph and the app would callout that specific
+            data point. We would also like to generalise this feature so that
+            once a workout finishes the voice assistant gives an overall review
+            on the experience and offer personalised feedback.
+            <br /><br />
+            We would also like to expand the app to other platforms such as iOS
+            and Windows considering this would increase the userbase by several
+            folds.
+            <br /><br />
+            We would also like to enable integration with health apps such as
+            Apple’s Healthkit as this would provide the app with more
+            personalised information regarding the user which would greatly
+            imporve the feedback the app would be able to give
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Footer-->
+    <section class="footer">
+      <div class="social-links">
+        <a href="https://github.com/BaneTrajkovic/Project-VeloCity"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://projectvelocity2023.wordpress.com/"
+          ><i class="fa-brands fa-wordpress"></i
+        ></a>
+      </div>
+
+      <ul class="list">
+        <li class="nav-item">
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/lit.html" class="nav-link">Research</a>
+        </li>
+        <li class="nav-item">
+          <a href="/hci.html" class="nav-link">HCi</a>
+        </li>
+        <li class="nav-item">
+          <a href="/requirements.html" class="nav-link">Requirements</a>
+        </li>
+        <li class="nav-item">
+          <a href="/implementation.html" class="nav-link">Implementation</a>
+        </li>
+        <li class="nav-item">
+          <a href="/requirements.html" class="nav-link">Requirements</a>
+        </li>
+        <li class="nav-item">
+          <a href="/ui.html" class="nav-link">Sys.Design</a>
+        </li>
+        <li class="nav-item">
+          <a href="/system.html" class="nav-link">UI Design</a>
+        </li>
+        <li class="nav-item">
+          <a href="/evaluation.html" class="nav-link">Testing</a>
+        </li>
+        <li class="nav-item">
+          <a href="/appendix.html" class="nav-link">Appendix</a>
+        </li>
+      </ul>
+      <p class="copyright">2023 All Rights Reserved</p>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

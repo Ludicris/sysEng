@@ -6,6 +6,7 @@
 }
 h1 {
   color: white;
+  padding-bottom: 25px;
 }
 .team4 h1,
 .team4 h2,
@@ -94,10 +95,6 @@ p {
 .container {
   max-width: 1170px;
   margin: auto;
-}
-
-ul {
-  list-style: none;
 }
 
 .footer {
@@ -218,12 +215,13 @@ h3 {
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
   --bs-table-hover-color: #212529;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
-  width: 100%;
   margin-bottom: 1rem;
+  width: 50%;
   color: #212529;
   vertical-align: top;
   border-color: #dee2e6;
   color: white;
+  text-align: center;
 }
 
 * + .list-marked {
@@ -306,7 +304,6 @@ h3 {
 }
 
 .v-tab {
-  max-width: 950px;
   width: 100%;
   padding: 20px;
   background: transparent;
@@ -336,7 +333,7 @@ h3 {
 
 .v-content .list label {
   height: 60px;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 60px;
   cursor: pointer;
@@ -350,7 +347,8 @@ h3 {
 #blog:checked ~ .list label.blog,
 #help:checked ~ .list label.help,
 #code:checked ~ .list label.code,
-#about:checked ~ .list label.about {
+#extra:checked ~ .list label.code,
+#about:checked ~ .list label.about #extra:checked ~ .list label.about {
   color: #fff;
 }
 .v-content .list label:hover {
@@ -381,6 +379,9 @@ h3 {
 #about:checked ~ .list .slider {
   top: 240px;
 }
+#extra:checked ~ .list .slider {
+  top: 300px;
+}
 .v-content .text-content {
   width: 80%;
   height: 100%;
@@ -405,12 +406,14 @@ h3 {
 #blog:checked ~ .text-content .blog,
 #help:checked ~ .text-content .help,
 #code:checked ~ .text-content .code,
+#extra:checked ~ .text-content .extra,
 #about:checked ~ .text-content .about {
   display: block;
 }
 #blog:checked ~ .text-content .home,
 #help:checked ~ .text-content .home,
 #code:checked ~ .text-content .home,
+#extra:checked ~ .text-content .home,
 #about:checked ~ .text-content .home {
   display: none;
 }
@@ -830,4 +833,13 @@ figure img {
   transform: scale(1.15);
   -ms-transform: scale(1.15); /* IE 9 */
   -webkit-transform: scale(1.15); /* Safari and Chrome */
+}
+
+section {
+  padding: 30px;
+}
+
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
 }
