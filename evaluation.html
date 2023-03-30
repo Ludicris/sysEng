@@ -44,7 +44,6 @@
 
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto">
-
             <li class="nav-item">
               <a href="/index.html" class="nav-link">Home</a>
             </li>
@@ -99,14 +98,19 @@
         <div class="div row justify-content-center mb-4">
           <h1 class="text-center">Testing Strategy</h1>
           <p class="lead">
-            To properly evaluate the artifact's design it is necessary to
-            perform tests to ensure that it is properly designed around the
-            intended user-base and meets the desired standards as in our MosCoW
-            list made with our clients at the beginning of the project. Due to
-            time restraints and the nature of the app we were unable to perform
-            any strict unit/integration testing. However, to test its
-            functionality in real-world scenarios we used user acceptance
-            testing
+            Users will undoubtedly use this app every day, in order to make it
+            error free, we had to thoroughly test it, both by using the app
+            every day ourselves, as well as testing it through series of unit
+            and integration tests. In our use case, we tried making the testing
+            process as intuitive for the developers, as the app is for the
+            users. From a high-level perspective we realised that there are to
+            main aspects of the app, which are not only crucial for its
+            functioning, but represent the foundation for any future
+            modifications to the app. We know there are two core components,
+            since everything a person does in the app is either directly or
+            indirectly connected to creating, saving, editing, as well as
+            recording workouts or reviewing the insights about past exercises.
+            Therefore we decided to focus our testing on those two key points.
           </p>
           <h3><br />Test Scope</h3>
           <div class="l-container">
@@ -130,6 +134,66 @@
                 </p>
               </li>
             </ol>
+          </div>
+          <h3>Test Methodology</h3>
+          <div class="l-container">
+            <p class="lead">
+              We used xUnit as our testing tool, mainly testing key functioning
+              components for the app with unit tests. Additionally, in order to
+              simulate interactions between multiple components of the app,
+              apart from testing individual parts, we used integration testing
+              approach where we tested the important functionalities such as
+              saving and extracting data about both saved workouts and insights,
+              which represent the core use case of our app. In the following
+              section we will discuss further the results of our testing.
+            </p>
+          </div>
+          <h1 class="text-center">Unit Testing</h1>
+          <div class="row">
+            <div class="d-flex justify-content-center">
+              <img src="img/kbane.png" class="img-fluid shadow-sm" />
+              <img src="img/Untitled 2 (2).png" class="img-fluid shadow-sm" />
+            </div>
+            <p class="lead">
+              Unit tests include workouts and insights, which represent the core
+              for not only that part of functionality but overlap with any new
+              addition we had in the app throughout its development. Making sure
+              that foundations hold despite any modifications was crucial in
+              keeping it safe and free of malfunctions. Furthermore, in order to
+              provide isolated testing, we created an entirely new project on
+              its own branch, where not only can we test the models separately
+              from the interaction of the user, but provide a layer of
+              independence, making sure that functionalities of the app are safe
+              themselves, and therefore mitigate the functional errors which
+              could eliminate the seamless and intuitive use cases that we were
+              trying to build for our users. Going layer by layer in the
+              foundational aspects of the app, we managed to build an app which
+              will be modular, since the core of it will be separated
+            </p>
+          </div>
+          <h1 class="text-center">Integration Testing</h1>
+          <div class="row">
+            <div class="d-flex justify-content-center">
+              <img
+                src="img/savedinsightsandworkoutstests.png"
+                class="img-fluid shadow-sm"
+              />
+
+            </div>
+            <p class="lead">
+              Integration testing required us to identify what are the
+              high-level functionalities we had for our users. We found that, at
+              its core, the app needs testing for two specific points connected
+              with insights and workouts, and those two points are quite
+              intuitively, saved insights and saved workouts, respectively.
+              Since we are saving the insights we had to mock adding of the
+              workouts to the dedicated folder as well as extracting them from
+              it, checking the correctness of their count in the process.
+              Similar aspects applied to insights, although due to its inherent
+              greater complexity, we had to add additional test cases, which
+              would test its broader functionality with the regards to the
+              high-level aspect of the app.
+            </p>
           </div>
           <h1 class="text-center"><br />User Acceptance Testing</h1>
           <p class="lead">
@@ -331,6 +395,14 @@
             our main objective. We can also discover from the responses than one
             minor improvement to be made is the addition of more training
             intents / types as to include everyone’s fitness lifestyle.
+            <br /><br />
+            The integration & unit testing showed that the foundational
+            components that we were building upon are safe and secure with
+            regards to any modifications we, therefore ensuring us that any bugs
+            which appear in the development of its broader functionality
+            originate exactly from that additonal code rather than the core
+            components of our app. Allowing us to be focus and determined on
+            creating the best accessibility-first fitness tracking app there is.
           </p>
         </div>
       </div>
