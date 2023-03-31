@@ -186,72 +186,65 @@
                       conclusion on the devlopment tools to be used in
                       Project-Velocity
                     </p>
-                    <div class="col-x1-12 techtable">
-                      <div class="card bg-dark">
-                        <div class="card-body">
-                          <div class="table-responsive">
-                            <table
-                              class="table table-hover mb-0 text-md-nowratp"
-                            >
-                              <thead>
-                                <tr>
-                                  <th>Term</th>
-                                  <th>Definition</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">XAML Page</th>
-                                  <td>
-                                    Extensible Application Markup Language page,
-                                    mainly used to define the visual contents of
-                                    the app.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">C# Code Behind</th>
-                                  <td>
-                                    C# code corresponding to the XAML Page, used
-                                    mainly for background processes.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Speech Recognition API</th>
-                                  <td>
-                                    Speech-To-Text API adding a new layer of
-                                    interaction within the app.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Text-To-Speech API</th>
-                                  <td>
-                                    Text-To-Speech API which allows additional
-                                    functionalities, going beyond those of a
-                                    screen reader.
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">Bluetooth API</th>
-                                  <td>
-                                    Bluetooth API conformed to .NET MAUI
-                                    framework, without its own prior integrated
-                                    capability.
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="table text-center table-center">
+                      <table class="table table-hover mb-0 text-md-nowratp">
+                        <thead>
+                          <tr>
+                            <th>Term</th>
+                            <th>Definition</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">XAML Page</th>
+                            <td>
+                              Extensible Application Markup Language page,
+                              mainly used to define the visual contents of the
+                              app.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">C# Code Behind</th>
+                            <td>
+                              C# code corresponding to the XAML Page, used
+                              mainly for background processes.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Speech Recognition API</th>
+                            <td>
+                              Speech-To-Text API adding a new layer of
+                              interaction within the app.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Text-To-Speech API</th>
+                            <td>
+                              Text-To-Speech API which allows additional
+                              functionalities, going beyond those of a screen
+                              reader.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Bluetooth API</th>
+                            <td>
+                              Bluetooth API conformed to .NET MAUI framework,
+                              without its own prior integrated capability.
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-  <!--Table-->
+          <!--Table-->
           <p class="lead">
-            The following is the overall sequence diagram which describes how user interacts with the screen and how our functionalities are accomplished in the background. 
+            The following is the overall sequence diagram which describes how
+            user interacts with the screen and how our functionalities are
+            accomplished in the background.
           </p>
           <figure class="figure">
             <img
@@ -262,29 +255,64 @@
               Overall Sequence Diagram
               <br />
             </figcaption>
-    <p class="lead">
-      User’s view only consists of the UI components generated by XAML files and edited by their
-       corresponding C# Code Behind files. Together they allow for seamless updates, navigation, transitions and much more. Code Behind files further allow adding valuable concepts such as Speech Recognition, making use of Android’s own native features, which combined with Text-To-Speech and adapted to our implementation work to provide Virtual Coach experience for our users. With respect to Bluetooth integration, we had to conform to the .NET MAUI framework, due to prior inexistence of its own integrated capability.
-    </p>     
-    <h4><br><b>Data storage</b></h4>
-    <h5><br><b>Adaptability-Oriented Approach</b></h5>
-    <p class="lead">To guarantee maintainability and simplify future upgrades, we decided to use highly efficient and straightforward form of persistent data storage, text files. More specifically, text files in CSV (Comma Separated Values) format. Some of the benefits to this approach were the following:</p>
-    
-    <h6><br><b>Adaptability</b></h6>
-    <p class="lead">Text files in CSV format are compatible and hence supported by wide variety of platforms and programming languages, allowing for greater simplicity when shifting towards future technologies or demands.</p>
-    
-    <h6><br><b>Readability</b></h6>
-    <p class="lead">Files in this format are inherently much more readable than other storage alternatives, enabling future app developers to effortlessly perform modifications, upgrades, as well as resolve any issues that may arise in the process.</p>
-    <h6><br><b>Simple Parsing</b></h6>
-    <p class="lead">Using CSV text files allows for quick data transformation, such as filtering, sorting and similar. The intrinsic simplicity of the parsing also means that we have much lower computational overhead unlike other storage systems. All of this leads to faster execution times of data-related tasks, as well as more optimised use of device resources, which fits great in our implementation.</p>
-    <h5><br><b>Data Schema Design</b></h5> 
-    <p class="lead">
-      Following the aforementioned benefits of using CSV files, such as adaptability, readability and simple parsing, we agreed on keeping them valuable when designing our data schema, which we used for storing workouts and insights about finished exercises. Both workouts and insights are being stored in App Data Directory, with an extension of “.workout.txt” and “.insight.txt” respectively. 
-    </p>
-    <h6><br><b>Workout Data Schema</b></h6>
-    <div class="white">
+            <p class="lead">
+              User’s view only consists of the UI components generated by XAML
+              files and edited by their corresponding C# Code Behind files.
+              Together they allow for seamless updates, navigation, transitions
+              and much more. Code Behind files further allow adding valuable
+              concepts such as Speech Recognition, making use of Android’s own
+              native features, which combined with Text-To-Speech and adapted to
+              our implementation work to provide Virtual Coach experience for
+              our users. With respect to Bluetooth integration, we had to
+              conform to the .NET MAUI framework, due to prior inexistence of
+              its own integrated capability.
+            </p>
+            <h4><br /><b>Data storage</b></h4>
+            <h5><br /><b>Adaptability-Oriented Approach</b></h5>
+            <p class="lead">
+              To guarantee maintainability and simplify future upgrades, we
+              decided to use highly efficient and straightforward form of
+              persistent data storage, text files. More specifically, text files
+              in CSV (Comma Separated Values) format. Some of the benefits to
+              this approach were the following:
+            </p>
 
-      <pre>
+            <h6><br /><b>Adaptability</b></h6>
+            <p class="lead">
+              Text files in CSV format are compatible and hence supported by
+              wide variety of platforms and programming languages, allowing for
+              greater simplicity when shifting towards future technologies or
+              demands.
+            </p>
+
+            <h6><br /><b>Readability</b></h6>
+            <p class="lead">
+              Files in this format are inherently much more readable than other
+              storage alternatives, enabling future app developers to
+              effortlessly perform modifications, upgrades, as well as resolve
+              any issues that may arise in the process.
+            </p>
+            <h6><br /><b>Simple Parsing</b></h6>
+            <p class="lead">
+              Using CSV text files allows for quick data transformation, such as
+              filtering, sorting and similar. The intrinsic simplicity of the
+              parsing also means that we have much lower computational overhead
+              unlike other storage systems. All of this leads to faster
+              execution times of data-related tasks, as well as more optimised
+              use of device resources, which fits great in our implementation.
+            </p>
+            <h5><br /><b>Data Schema Design</b></h5>
+            <p class="lead">
+              Following the aforementioned benefits of using CSV files, such as
+              adaptability, readability and simple parsing, we agreed on keeping
+              them valuable when designing our data schema, which we used for
+              storing workouts and insights about finished exercises. Both
+              workouts and insights are being stored in App Data Directory, with
+              an extension of “.workout.txt” and “.insight.txt” respectively.
+            </p>
+            <h6><br /><b>Workout Data Schema</b></h6>
+            <div class="white">
+              <pre>
           Workout:
           Name,ActivityType,TrainingIntent
           
@@ -292,12 +320,12 @@
           Name: String
           ActivityType: string
           TrainingIntent: string
-      </pre>
-    </div>
-    <h6><br><b>Insight Data Schema</b></h6>
-    <div class="white">
-
-      <pre>
+      </pre
+              >
+            </div>
+            <h6><br /><b>Insight Data Schema</b></h6>
+            <div class="white">
+              <pre>
         Insight: (using the Workout schema for first field)
         Workout|hour,minute,second|heartRateData|cadenceData
         
@@ -311,9 +339,13 @@
         Duration: TimeOnly(hour,minute,second)
         HeartRateData: List(int)
         CadenceData: List(int)
-      </pre>
-    </div>
-  </section>
+      </pre
+              >
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
     <section class="footer">
       <div class="social-links">
         <a href="https://github.com/BaneTrajkovic/Project-VeloCity"
